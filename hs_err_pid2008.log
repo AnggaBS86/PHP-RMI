@@ -1,0 +1,102 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (attachListener_windows.cpp:157), pid=2008, tid=2464
+#  Error: guarantee(_mutex != (HANDLE)0,"mutex creation failed")
+#
+# JRE version: 6.0_22-b04
+# Java VM: Java HotSpot(TM) Client VM (17.1-b03 mixed mode, sharing windows-x86 )
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x02b4f800):  JavaThread "Attach Listener" daemon [_thread_in_vm, id=2464, stack(0x02d30000,0x02d80000)]
+
+Stack: [0x02d30000,0x02d80000],  sp=0x02d7fc24,  free space=13f02d7fc34k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1fd0f0]
+V  [jvm.dll+0xa45c8]
+V  [jvm.dll+0x1cf4b]
+V  [jvm.dll+0x1e7004]
+V  [jvm.dll+0x185f3c]
+C  [msvcr71.dll+0x9565]
+C  [kernel32.dll+0xb713]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x02b4f800 JavaThread "Attach Listener" daemon [_thread_in_vm, id=2464, stack(0x02d30000,0x02d80000)]
+  0x02b4e000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2600, stack(0x02ce0000,0x02d30000)]
+  0x02b0c800 JavaThread "Finalizer" daemon [_thread_blocked, id=2508, stack(0x02c90000,0x02ce0000)]
+  0x02b0b400 JavaThread "Reference Handler" daemon [_thread_blocked, id=2564, stack(0x02c40000,0x02c90000)]
+  0x002b6800 JavaThread "main" [_thread_in_vm, id=2480, stack(0x008c0000,0x00910000)]
+
+Other Threads:
+  0x02b09c00 VMThread [stack: 0x02bf0000,0x02c40000] [id=2476]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x002b5600] Threads_lock - owner thread: 0x002b6800
+
+Heap
+ def new generation   total 4928K, used 200K [0x22990000, 0x22ee0000, 0x27ee0000)
+  eden space 4416K,   4% used [0x22990000, 0x229c22c8, 0x22de0000)
+  from space 512K,   0% used [0x22de0000, 0x22de0000, 0x22e60000)
+  to   space 512K,   0% used [0x22e60000, 0x22e60000, 0x22ee0000)
+ tenured generation   total 10944K, used 0K [0x27ee0000, 0x28990000, 0x32990000)
+   the space 10944K,   0% used [0x27ee0000, 0x27ee0000, 0x27ee0200, 0x28990000)
+ compacting perm gen  total 12288K, used 23K [0x32990000, 0x33590000, 0x36990000)
+   the space 12288K,   0% used [0x32990000, 0x32995cf0, 0x32995e00, 0x33590000)
+    ro space 10240K,  54% used [0x36990000, 0x36f0c510, 0x36f0c600, 0x37390000)
+    rw space 12288K,  55% used [0x37390000, 0x37a2fb78, 0x37a2fc00, 0x37f90000)
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Program Files\Java\jdk1.6.0_22\bin\java.exe
+0x7c900000 - 0x7c9af000 	C:\WINDOWS\system32\ntdll.dll
+0x7c800000 - 0x7c8f6000 	C:\WINDOWS\system32\kernel32.dll
+0x77dd0000 - 0x77e6b000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x77e70000 - 0x77f02000 	C:\WINDOWS\system32\RPCRT4.dll
+0x77fe0000 - 0x77ff1000 	C:\WINDOWS\system32\Secur32.dll
+0x7c340000 - 0x7c396000 	C:\Program Files\Java\jdk1.6.0_22\jre\bin\msvcr71.dll
+0x6d8a0000 - 0x6db47000 	C:\Program Files\Java\jdk1.6.0_22\jre\bin\client\jvm.dll
+0x7e410000 - 0x7e4a1000 	C:\WINDOWS\system32\USER32.dll
+0x77f10000 - 0x77f59000 	C:\WINDOWS\system32\GDI32.dll
+0x76b40000 - 0x76b6d000 	C:\WINDOWS\system32\WINMM.dll
+0x629c0000 - 0x629c9000 	C:\WINDOWS\system32\LPK.DLL
+0x74d90000 - 0x74dfb000 	C:\WINDOWS\system32\USP10.dll
+0x6d850000 - 0x6d85c000 	C:\Program Files\Java\jdk1.6.0_22\jre\bin\verify.dll
+0x6d3d0000 - 0x6d3ef000 	C:\Program Files\Java\jdk1.6.0_22\jre\bin\java.dll
+0x6d330000 - 0x6d338000 	C:\Program Files\Java\jdk1.6.0_22\jre\bin\hpi.dll
+0x76bf0000 - 0x76bfb000 	C:\WINDOWS\system32\PSAPI.DLL
+0x6d890000 - 0x6d89f000 	C:\Program Files\Java\jdk1.6.0_22\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: ab.phprmi.client.http.netty.ClientNettyHttpServer
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Autodesk\Backburner\
+USERNAME=Mz AnggaDunK
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 2, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows XP Build 2600 Service Pack 3
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 15 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+
+Memory: 4k page, physical 1505708k(680596k free), swap 3447964k(2675064k free)
+
+vm_info: Java HotSpot(TM) Client VM (17.1-b03) for windows-x86 JRE (1.6.0_22-b04), built on Sep 15 2010 00:56:36 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Fri Mar 15 17:18:48 2013
+elapsed time: 0 seconds
+
