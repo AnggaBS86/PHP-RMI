@@ -1,7 +1,7 @@
 package ab.phprmi.config;
 
 /**
- * class untuk pengaturan constanta
+ * class untuk pengaturan constanta aplikasi
  * @author Angga BS
  */
 public class Constant
