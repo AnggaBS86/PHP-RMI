@@ -11,5 +11,5 @@ package ab.phprmi.config;
 public class SecurityConstant
 {
 
-    public static final String RC4_KEY = "Yuliana";
+    public static final String RC4_KEY = "Sanchez";
 }
